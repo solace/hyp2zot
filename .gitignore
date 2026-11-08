@@ -4,7 +4,7 @@
 !.env.example
 
 # Your personal launchd copy (tracked template is local.hyp2zot.plist.example)
-local.hyp2zot.plist.example
+local.hyp2zot.plist
 
 # Python and uv
 .venv/

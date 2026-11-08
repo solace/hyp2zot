@@ -30,7 +30,7 @@ from pathlib import Path
 import requests
 from pyzotero import zotero
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 USER_AGENT = f"hyp2zot/{__version__}"
 HYP_API = "https://hypothes.is/api"
 MARKER_TAG = "hyp-annotation"

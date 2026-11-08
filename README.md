@@ -71,7 +71,7 @@ HYPOTHESIS_USERNAME the username you use to log into Hypothesis
 HYPOTHESIS_API_KEY  from hypothes.is/account/developer
 ```
 
-The Zotero library ID and a read/write key can be found at https://www.zotero.org/settings/security#applications,
+The Zotero library ID and a read/write key can be found at https://www.zotero.org/settings/security#applications.
 The Hypothesis key can be found at https://hypothes.is/account/developer.
 
 ## Usage
@@ -92,3 +92,17 @@ uv run hyp2zot.py --env-var /path/to/env/file
 ```
 
 Or you can add it to `launchd` to periodically update Zotero. The example template `plist` file in this repository will fetch from Hypothesis daily at 9am or at the time/frequency you require.
+
+## Troubleshooting
+
+### Apple notifications are not displaying
+
+Notifications are only shown if there is an error to display, or if the `--notify-success` flag is set *and* there were notes to import.
+
+If notifications do not display, test notifications in Terminal with:
+
+```
+osascript -e 'display notification "test" with title "Test"'
+```
+
+If that doesn't work, check System Settings -> Notifications and allow notifications for for Script Editor. 

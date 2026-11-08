@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>local.hyp2zot</string>
+
+  <!-- Replace YOURNAME. Use the project's uv-created interpreter so dependencies are found.
+       The env-file flag takes an absolute path; keep that file chmod 600 and out of version control. -->
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/homebrew/bin/uv</string>
+    <string>run</string>
+    <string>--project</string>
+    <string>/Users/YOURNAME/hyp2zot</string>
+    <string>/Users/YOURNAME/hyp2zot/hyp2zot.py</string>
+    <string>--env-file</string>
+    <string>/Users/YOURNAME/hyp2zot/.env</string>
+  </array>
+
+  <!-- Daily at 09:00. A run missed while the Mac slept should fire on wake (not verified). -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>9</integer>
+    <key>Minute</key>
+    <integer>00</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/hyp2zot.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/hyp2zot.err</string>
+</dict>
+</plist>
